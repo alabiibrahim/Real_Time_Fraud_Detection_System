@@ -36,6 +36,18 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 
 ## Methodology
 
+- Setup Fondation & Data Pipeline. (Goal: To have a live transaction stream running.)
+    - kafka locally on docker-desktop.
+    - Stream fraud_detect datasets as transactions.
+    - Build Feature engineering pipeline.
+    - store feature in a simple features store.
+
+- Buil detection models. (Goal: Models scoring transactions in real time.)
+    - Train Isolation Forest to score anomalies.
+    - Trained XG-boost classifier and tune precision.
+    - Build weighted score aggregate.
+    - Add SHAP explainability layer.
+
 
 ## Result
 
