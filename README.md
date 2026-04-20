@@ -41,8 +41,17 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 
 
 ## Challenges & Solution
+
+
 **Challenge**
-- After creating a kafka, and docker containers I started live stream and noticed it takes 7-8 hrs to send 280,000 data, with that math, It's certain to achieve the full sending of 6m+ rows data will take 7-8 days.
+- The data pipeline processing performance was terrible and I noticed it takes 7-8 hrs to send 280,000 data, with that math, It's certain to achieve the full sending of 6m+ rows data will take 7-8 days maiking the project goal impossible.
 
 **Solution**
-- I went through the code and noticed the timer to send each rows lapses on 1sec per row. I fix that by rewriting/resetting it to millisecond per row. What was predict to take 7-8 days of streaming,  now takes less than 2 hrs without breakages or data loss.
+- Instead of sending data rows by rows, I did a batch processing.
+- Made changes to the chunk size to balance memory usage.
+- Lastly, I noticed the timer is also contributing to this so i reduced it from 0.1 seconds to 0.001 seconds.
+
+**Result**
+- What was predicted to take 7-8 days before data fully sent now takes less than 2hrs. 95% improvement.
+- Increased in data transmission of 35k rows per hour to 50k rows per minutes. 85% transmission speed.
+- Real time fraud detection was successfully enabled.
