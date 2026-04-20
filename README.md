@@ -25,7 +25,11 @@
 
 | Tools | Purpose |
 | --- | --- | 
-| Docker | Stream live data |
+| Docker | Stream live data (docker containers) |
+| Python | train model, xgboost |
+| Kafka | Batch files transfers | 
+| SHAP | Classifier | 
+| Streamlit | In place of Power-BI for dahsboard | 
 
 
 ## Methodology
