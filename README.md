@@ -17,7 +17,9 @@
 
 
 
-## PrjoectGoal
+## ProjectGoal
+
+Analyze transaction-level data to flag suspicious patterns using anomaly detection and graph-based analysis. Visualize fraud networks and build an alert pipeline.
 
 
 
