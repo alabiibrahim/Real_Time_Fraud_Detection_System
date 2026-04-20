@@ -24,9 +24,7 @@
 ## Tools
 
 | Tools | Purpose |
-
 | --- | --- | 
-
 | Docker | Stream live data |
 
 
