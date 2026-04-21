@@ -29,13 +29,13 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 | --- | --- | 
 | Docker | Stream live data (docker containers) |
 | Python (Pandas, Numpy, XGBoost, SHAP, Joblib, Scikit-Learn) | Data cleaning, feature engineering, train model |
-| Apache-Kafka | Batch files transfers | 
+| Apache-Kafka | Data process pipeline | 
 | Streamlit | In place of Power-BI for dahsboard | 
 
 
 ## Methodology
 
-- Setup Fondation & Data Pipeline. (Goal: To have a live transactions stream running.)
+- Setup Foundation & Data Pipeline. (Goal: To have a live transactions stream running.)
     - kafka locally on docker-desktop.
     - Stream fraud_detect datasets as transactions.
     - Build Feature engineering pipeline.
