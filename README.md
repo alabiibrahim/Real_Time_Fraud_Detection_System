@@ -28,9 +28,8 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 | Tools | Purpose |
 | --- | --- | 
 | Docker | Stream live data (docker containers) |
-| Python | train model, xgboost |
-| Kafka | Batch files transfers | 
-| SHAP | Classifier | 
+| Python (Pandas, Numpy, XGBoost, SHAP, Joblib, Scikit-Learn) | Data cleaning, feature engineering, train model |
+| Apache-Kafka | Batch files transfers | 
 | Streamlit | In place of Power-BI for dahsboard | 
 
 
