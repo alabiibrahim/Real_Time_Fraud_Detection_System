@@ -51,6 +51,8 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 
 ## Architecture
 
+![Architecture](images/Untitled%20Diagram.drawio.png)
+
 
 CSV Dataset ‣ Producer ‣ Kafka (Topic) ‣ Consumer ‣ 
 
