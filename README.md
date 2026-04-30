@@ -2,7 +2,13 @@
 
 
 
-- [ProjectGoal](#ProjectGoal)
+- [ProjectOverview](#ProjectOverview)
+- [Architecture](#Architecture)
+- [Phase1](#Phase1)
+- [Phase2](#Phase2)
+- [Phase3](#Phase3)
+- [Phase4](#Phase4)
+- [ExceutionOrder](#ExceutionOrder)
 - [Tools](#Tools)
 - [Methodology](#Methodology)
 - [Result](#Result)
@@ -17,9 +23,22 @@
 
 
 
-## ProjectGoal
+## Project Overview
+
+**Business Problem**
+
+Financial institutions process millions of transactions daily. Manually reviewing all of them is impossible. This system automatically scores every transaction in real time,
+flags suspicious activity, and presents it to an analyst for a final decision to reduce fraud losses, while minimising false alarms that frustrate legitimate customers.
+
+**Objective**
+
+This project builds a production-grade, real-time fraud detection system entirely from scratch covering data streaming, machine learning, graph analysis, explainability, and a live analyst dashboard. 
 
 Analyze transaction-level data to flag suspicious patterns using anomaly detection and graph-based analysis. Visualize fraud networks and build an alert pipeline.
+
+**Results**
+
+
 
 
 
