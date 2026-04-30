@@ -37,9 +37,10 @@ This project builds a production-grade, real-time fraud detection system entirel
 Analyze transaction-level data to flag suspicious patterns using anomaly detection and graph-based analysis. Visualize fraud networks and build an alert pipeline.
 
 **Results**
+
 | Measurable outcome | Results |
 | --- | --- |
-| Transactions (CSV) | 6,362,620 |
+| Processed transactions (CSV) | 6,362,620 |
 | ROC-AUC | 0.9999 |
 | PR-AUC | 0.9834 |
 | Fraud precision rate | 89% |
