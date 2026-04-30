@@ -49,7 +49,45 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 | Scoring latency | <50ms |
 
 
+## Architecture
 
+CSV Dataset
+    │
+    ▼
+┌─────────────┐     ┌──────────────────┐     ┌─────────────────────────────────┐
+│  Producer   │────▶│   Apache Kafka   │────▶│          Consumer               │
+│  (Python)   │     │  "transactions"  │     │                                 │
+│             │     │     topic        │     │  ┌─────────────────────────┐    │
+└─────────────┘     └──────────────────┘     │  │  Feature Engineering    │    │
+                                             │  └────────────┬────────────┘    │
+                                             │               │                 │
+                                             │  ┌────────────▼────────────┐    │
+                                             │  │   XGBoost Classifier    │    │
+                                             │  │   (70% weight)          │    │
+                                             │  └────────────┬────────────┘    │
+                                             │               │                 │
+                                             │  ┌────────────▼────────────┐    │
+                                             │  │  Graph ML Ring Score    │    │
+                                             │  │   (30% weight)          │    │
+                                             │  └────────────┬────────────┘    │
+                                             │               │                 │
+                                             │  ┌────────────▼────────────┐    │
+                                             │  │   Ensemble Decision     │    │
+                                             │  │  FRAUD / REVIEW / OK    │    │
+                                             │  └────────────┬────────────┘    │
+                                             └───────────────┼─────────────────┘
+                                                             │
+                                                             ▼
+                                                    ┌─────────────────┐
+                                                    │   alerts.json   │
+                                                    └────────┬────────┘
+                                                             │
+                                                             ▼
+                                                    ┌─────────────────┐
+                                                    │    Streamlit    │
+                                                    │   Dashboard     │
+                                                    │ localhost:8501  │
+                                                    └─────────────────┘
 
 ## Tools
 
