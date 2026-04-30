@@ -51,7 +51,7 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 
 ## Architecture
 
-![Architecture](images/Untitled%20Diagram.drawio%20(2).png)
+![Architecture](images/Untitled%20Diagram.drawio%20(3).png)
 
 
 
