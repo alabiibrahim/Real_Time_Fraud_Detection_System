@@ -75,8 +75,9 @@ This part a machine learning model was built that scores every transaction (0-1)
   - XG Boost is industry standard for fraud data cases because it handles class imbalance, and also easy to train on millions of rows.
   - SHAP explains why a specific transaction is flagged. It shows then features that pushes the score up and by how much.
 
-**Feature Engineering (Step 3):**
+**Graph, ML ring detection (Step 3):**
 
+Developed a graph based fraud detection layer that analyses the relationship between accounts and not just individual transactions.
 
 ## Methodology
 
