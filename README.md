@@ -1,5 +1,6 @@
 # Real_Time_Fraud_Detection_System_
 
+![visual](images/ac6.PNG)
 
 - [Business Problem](#BusinessProblem)
 - [ProjectOverview](#ProjectOverview)
@@ -8,10 +9,6 @@
 - [Tools](#Tools)
 - [ExceutionOrder](#ExceutionOrder)
 - [Challenge&Solution](#Challenges&Solution)
-
-
-
-![visual](images/ac6.PNG)
 
 
 ## Project Overview
@@ -89,10 +86,8 @@ A live dashboard built with streamlit that opens automatically on my browser. It
 - Streamlit converts python script directly into web development application without no front end required.
 
 
+## Execution Process
 
-Execution Process
-
-Kafka + Docker ‣ Consumer ‣ Producer  ‣ Streamlit live Dashboard
  
 **Kafka + Docker**
 
