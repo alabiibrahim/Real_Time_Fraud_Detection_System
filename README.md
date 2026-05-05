@@ -1,8 +1,10 @@
 
 
-  ![visual](images/ac7.PNG)
+![visual](images/ac7.PNG)
 
-  ![visual](images/ac6.PNG)
+![visual](images/ac6.PNG)
+
+![Walkthrough-Video](https://screenrec.com/share/vaIqtEyWsC)
 
 
 ## Table of Contents
