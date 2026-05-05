@@ -4,7 +4,7 @@
 
 ![visual](images/ac6.PNG)
 
-![Walkthrough-Video](https://screenrec.com/share/vaIqtEyWsC)
+[Watch demo-Video](https://screenrec.com/share/vaIqtEyWsC)
 
 
 ## Table of Contents
