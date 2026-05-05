@@ -99,14 +99,14 @@ Execution Process
 
 Kafka + Docker ‣ Consumer ‣ Producer  ‣ Streamlit live Dashboard
 
-![Visual](main/images/ac1.PNG)
+![Visual](images/ac1.PNG)
 
 
 Consumer
 
-![Visual]((main/images/ac2.PNG))
+![Visual](images/ac2.PNG)
 
-![visual](main/images/ac3.PNG)
+![visual](images/ac3.PNG)
 
 
 Producer 
