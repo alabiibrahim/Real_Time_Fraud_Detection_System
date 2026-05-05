@@ -43,6 +43,15 @@ flags suspicious activity, and presents it to an analyst for a final decision to
 
 ## Architecture
 
+This project is built on three functional layers that works together as a continous pipeline. 
+
+```
+- Ingestion: Its purpose is to stream raw CSV transactions in realtime.
+- Detection: Its purpose is to score each and every transaction based on fraud probabilites.
+- Response: Purpose is to act on the score.
+
+```
+
 ![Architecture](images/fraud%20detect%20system%20-%20data%20architecture.png)
 
 ```
