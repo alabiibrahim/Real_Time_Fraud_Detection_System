@@ -127,6 +127,8 @@ A live dashboard built with streamlit that opens automatically on my browser. It
 
 ![visual](images/ac4.PNG)
 
+![visual](images/ac9.PNG)
+
 **Dashboard running**
 
 ![visual](images/ac5.PNG)
