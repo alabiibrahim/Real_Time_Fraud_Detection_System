@@ -67,13 +67,15 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 
 # Methodologies 
 
-**Pipeline, Kafka streaming (Step 1)**
+**Pipeline, Kafka streaming (Step 1):**
+
 I built a real time data streaming pipeline using **Apache Kafka** that runs inside a docker container. The pipeline reads 6m+ transactions from a CSV file and streams them as live JSON events. It imitates a real babnk transaction feeds. 
 
-**XG-Boost classifier & SHAP (Step 2)**
+**XG-Boost classifier & SHAP (Step 2):**
+
 This part a machine learning model was built that score every transaction (0-1) incase of fraud probability. This model is trained on 5m historical transactions and validated 1.27m. SHAP is added to tell the reason why a transaction was flagged. 
 
-**Feature Engineering (Step 3)**
+**Feature Engineering (Step 3):**
 
 
 ## Methodology
