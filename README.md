@@ -4,7 +4,7 @@
 
 ![visual](images/ac6.PNG)
 
-[Watch demo-Video](https://screenrec.com/share/vaIqtEyWsC)
+[Watch Demo-Video](https://screenrec.com/share/vaIqtEyWsC)
 
 
 ## Table of Contents
@@ -149,6 +149,6 @@ A live dashboard built with streamlit that opens automatically on my browser. It
 - Lastly, I noticed the timer is also contributing to this so i reduced it from 0.1 seconds to 0.001 seconds.
 
 **Result**
-- What was predicted to take 7-8 days before data fully sent now takes less than 1hr. 95% improvement.
-- Increased in data transmission of 35k rows per hour to 50k rows per minutes. 85% transmission speed.
+- What was predicted to take 7-8 days before data fully sent now takes less than 1hr (95% improvement).
+- Increased in data transmission of 35k rows per hour to 50k rows per minutes (85% transmission speed).
 - Real time fraud detection was successfully enabled.
