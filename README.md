@@ -108,7 +108,8 @@ Kafka + Docker ‣ Consumer ‣ Producer  ‣ Streamlit live Dashboard
 
 ![Visual](images/ac2.PNG)
 
-![visual](images/ac3.PNG)
+
+![visual](images/ac3-c.PNG)
 
 
 **Producer** 
