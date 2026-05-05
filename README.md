@@ -92,7 +92,7 @@ A live dashboard built with streamlit that opens automatically on my browser. It
 ## Execution Process
 
  
-**Kafka + Docker starting**
+**Kafka + Docker container starting**
 
 ![Visual](images/ac1.PNG)
 
