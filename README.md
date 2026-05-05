@@ -1,7 +1,10 @@
 # Real_Time_Fraud_Detection_System_
 
-![visual](images/ac6.PNG)
+  ![visual](images/ac7.PNG)
 
+  ![visual](images/ac6.PNG)
+
+  
 - [Business Problem](#BusinessProblem)
 - [ProjectOverview](#ProjectOverview)
 - [Architecture](#Architecture)
