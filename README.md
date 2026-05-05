@@ -120,10 +120,12 @@ Kafka + Docker ‣ Consumer ‣ Producer  ‣ Streamlit live Dashboard
 ![visual](images/ac5.PNG)
 
 
-![visual](images/ac6.PNG)
+
 
 
 **Dashboard**
+
+![visual](images/ac6.PNG)
 
 ![visual](images/ac7.PNG)
 
