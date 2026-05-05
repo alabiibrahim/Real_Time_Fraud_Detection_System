@@ -98,11 +98,13 @@ A live dashboard built with streamlit that opens automatically on my browser. It
 Execution Process
 
 Kafka + Docker ‣ Consumer ‣ Producer  ‣ Streamlit live Dashboard
+ 
+**Kafka + Docker**
 
 ![Visual](images/ac1.PNG)
 
 
-Consumer
+**Consumer**
 
 ![Visual](images/ac2.PNG)
 
@@ -111,11 +113,17 @@ Consumer
 
 Producer 
 
-![Visual](main/images/py2)
+![visual](images/ac4.PNG)
+
+![visual](images/ac5.PNG)
+
+![visual](images/ac6.PNG)
 
 Dashboard
 
-![Visual](main/images/py2)
+![visual](images/ac7.PNG)
+
+![visual](images/ac8.PNG)
 
 
 ## Challenges & Solution
