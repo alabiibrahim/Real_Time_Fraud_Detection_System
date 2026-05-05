@@ -65,6 +65,20 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 | Apache-Kafka | Data process pipeline | 
 | Streamlit | In place of Power-BI for dahsboard | 
 
+# Phase 1 - Pipeline, Kafaka streaming.
+I built a real time data streaming pipeline using **Apache Kafka** that runs inside a docker container. The pipeline reads 6m+ transactions from a CSV file and streams them as live JSON events. It imitates a real babnk transaction feeds. 
+
+# Phase 2 - XG boost classifier and SHAP.
+This part a machine learning model was built that score every transaction (0-1) incase of fraud probability. This model is trained on 5m historical transactions and validated 1.27m. SHAP is added to tell the reason why a transaction was flagged. 
+
+**Feature Engineering**
+
+
+# Phase 3
+
+
+# Phase 4
+
 
 ## Methodology
 
@@ -108,6 +122,6 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 - Lastly, I noticed the timer is also contributing to this so i reduced it from 0.1 seconds to 0.001 seconds.
 
 **Result**
-- What was predicted to take 7-8 days before data fully sent now takes less than 2hrs. 95% improvement.
+- What was predicted to take 7-8 days before data fully sent now takes less than 1hr. 95% improvement.
 - Increased in data transmission of 35k rows per hour to 50k rows per minutes. 85% transmission speed.
 - Real time fraud detection was successfully enabled.
