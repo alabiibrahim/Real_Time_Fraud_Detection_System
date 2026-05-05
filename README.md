@@ -3,7 +3,6 @@
 
 - [Business Problem](#BusinessProblem)
 - [ProjectOverview](#ProjectOverview)
-- [Result](#Result)
 - [Architecture](#Architecture)
 - [Methodology](#Methodology)
 - [Tools](#Tools)
@@ -20,20 +19,19 @@
 
 
 
-
+## Project Overview
 
 
 **Business Problem**
 - Financial institutions process millions of transactions daily. Manually reviewing all of them is impossible. This system automatically scores every transaction in real time,
 flags suspicious activity, and presents it to an analyst for a final decision to reduce fraud losses, while minimising false alarms that frustrate legitimate customers.
 
-## Project Overview
 
-**Objective** 
+***Objective (Goal)***
 - This project creates a real-time, production-grade fraud detection system from scratch that includes explainability, data streaming, machine learning, graph analysis, and a live analyst dashboard. 
 
 
-**Results**
+***Results***
 
 | Model | Results | Meaning |
 | --- | --- | --- |
