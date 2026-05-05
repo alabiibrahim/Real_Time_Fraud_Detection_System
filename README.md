@@ -1,9 +1,11 @@
-# Real_Time_Fraud_Detection_System_
+# Real_Time_Fraud_Detection_System
 
   ![visual](images/ac7.PNG)
 
   ![visual](images/ac6.PNG)
 
+
+## Table of Contents
   
 - [Business Problem](#BusinessProblem)
 - [ProjectOverview](#ProjectOverview)
