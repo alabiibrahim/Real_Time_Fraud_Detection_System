@@ -4,10 +4,6 @@
 
 - [ProjectOverview](#ProjectOverview)
 - [Architecture](#Architecture)
-- [Phase1](#Phase1)
-- [Phase2](#Phase2)
-- [Phase3](#Phase3)
-- [Phase4](#Phase4)
 - [ExceutionOrder](#ExceutionOrder)
 - [Tools](#Tools)
 - [Methodology](#Methodology)
@@ -73,7 +69,11 @@ I built a real time data streaming pipeline using **Apache Kafka** that runs ins
 
 **XG-Boost classifier & SHAP (Step 2):**
 
-This part a machine learning model was built that score every transaction (0-1) incase of fraud probability. This model is trained on 5m historical transactions and validated 1.27m. SHAP is added to tell the reason why a transaction was flagged. 
+This part a machine learning model was built that scores every transaction (0-1) incase of fraud probability. This model is trained on 5m historical transactions and validated on 1.27m. SHAP is added to tell the reason why a transaction was flagged. 
+
+  - Feature Engineering (Training model for a ML output to undertsand): Raw transactions columns are not enough for a model to learn from, so a new feature was engineered to capture fraud anomalies.
+  - XG Boost is industry standard for fraud data cases because it handles class imbalance, and also easy to train on millions of rows.
+  - SHAP explains why a specific transaction is flagged. It shows then features that pushes the score up and by how much.
 
 **Feature Engineering (Step 3):**
 
