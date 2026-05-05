@@ -67,9 +67,16 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 
 I built a real time data streaming pipeline using **Apache Kafka** that runs inside a docker container. The pipeline reads 6m+ transactions from a CSV file and streams them as live JSON events. It imitates a real babnk transaction feeds. The data is being sent in batches (100,000 rows).
 
+***Why it Matters*** 
+
+- Batch data streaming process.
+- Integrate with docker containers.
+
 **XG-Boost classifier & SHAP (Step 2):**
 
 This part a machine learning model was built that scores every transaction (0-1) incase of fraud probability. This model is trained on 5m historical transactions and validated on 1.27m. SHAP is added to tell the reason why a transaction was flagged. 
+
+***Why it Matters***
 
   - Feature Engineering (Training model for a ML output to undertsand): Raw transactions columns are not enough for a model to learn from, so a new feature was engineered to capture fraud anomalies.
   - XG Boost is industry standard for fraud data cases because it handles class imbalance, and also easy to train on millions of rows.
@@ -79,6 +86,8 @@ This part a machine learning model was built that scores every transaction (0-1)
 
 Developed a graph based fraud detection (TRANSFER and CASH_OUT transactions only types where fraud occurs) layer that analyses the relationship between accounts and not just individual transactions. It build networks where accounts are node and transactions are edges.
 
+***Why it Matters***
+
 Ring score - every accounts receives a ring score between 0 and 1 on its graph properties. This rules are interpretable so analyst can understand and challenge any score.
 Ensemble scoring to make decisions - the final fraud score cobines model with weighted average. XG Boost carries the 70% of the weight and the graph score carries 30.
 
@@ -87,8 +96,9 @@ Ensemble scoring to make decisions - the final fraud score cobines model with we
 
 A live dashboard built with streamlit that opens automatically on my browser. It refreshes every 5 secods, show charts and an alerts queue where analyst can review flagged transactions and note down decisions.
 
-***Why Streamlit***
-Streamlit converts python script directly into web development application without no front end required.
+***Why Streamlit?***
+
+- Streamlit converts python script directly into web development application without no front end required.
 
 ## Methodology
 
