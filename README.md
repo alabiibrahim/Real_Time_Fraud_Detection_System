@@ -35,7 +35,7 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 **Results**
 
 | Model | Results | Meaning |
-| --- | --- |
+| --- | --- | --- |
 | Processed transactions (CSV) | 6,362,620 |
 | ROC-AUC | 0.9999 |
 | PR-AUC | 0.9834 |
