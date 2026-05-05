@@ -11,12 +11,7 @@
 
 
 
-
-
-![Visual](main/images/py1)
-
-![Visual](main/images/py2)
-
+![visual](images/ac6.PNG)
 
 
 ## Project Overview
@@ -116,18 +111,13 @@ Kafka + Docker ‣ Consumer ‣ Producer  ‣ Streamlit live Dashboard
 
 ![visual](images/ac4.PNG)
 
+**Dashboard**
 
 ![visual](images/ac5.PNG)
 
 
-
-
-
-**Dashboard**
-
-![visual](images/ac6.PNG)
-
 ![visual](images/ac7.PNG)
+
 
 ![visual](images/ac8.PNG)
 
