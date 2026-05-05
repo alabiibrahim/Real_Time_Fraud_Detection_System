@@ -1,13 +1,15 @@
 # Real_Time_Fraud_Detection_System_
 
 
-
+- [Business Problem](#BusinessProblem)
 - [ProjectOverview](#ProjectOverview)
-- [Architecture](#Architecture)
-- [ExceutionOrder](#ExceutionOrder)
-- [Tools](#Tools)
-- [Methodology](#Methodology)
 - [Result](#Result)
+- [Architecture](#Architecture)
+- [Methodology](#Methodology)
+- [Tools](#Tools)
+- [ExceutionOrder](#ExceutionOrder)
+- [Challenge&Solution](#Challenges&Solution)
+
 
 
 
@@ -58,9 +60,9 @@ flags suspicious activity, and presents it to an analyst for a final decision to
 | Python (Pandas, Numpy, XGBoost, SHAP, Joblib, Scikit-Learn) | Data cleaning, feature engineering, train model |
 | Streamlit | In place of Power-BI for dahsboard | 
 
-## Methodologies 
+## Methodology 
 
-**Pipeline, Kafka streaming (Step 1):**
+**Pipeline & Kafka streaming (Step 1):**
 
 I built a real time data streaming pipeline using **Apache Kafka** that runs inside a docker container. The pipeline reads 6m+ transactions from a CSV file and streams them as live JSON events. It imitates a real babnk transaction feeds. The data is also being sent in batches (100,000 rows).
 
@@ -77,7 +79,7 @@ This part a machine learning model was built that scores every transaction (0-1)
   - XG Boost is industry standard for fraud data cases because it handles class imbalance, and also easy to train on millions of rows.
   - SHAP explains why a specific transaction is flagged. It shows then features that pushes the score up and by how much.
 
-**Graph, ML ring detection (Step 3):**
+**Graph & ML ring detection (Step 3):**
 
 Developed a graph based fraud detection (TRANSFER and CASH_OUT transactions only types where fraud occurs) layer that analyses the relationship between accounts and not just individual transactions. It build networks where accounts are node and transactions are edges.
 
@@ -86,7 +88,7 @@ Developed a graph based fraud detection (TRANSFER and CASH_OUT transactions only
 - Ensemble scoring to make decisions - the final fraud score cobines model with weighted average. XG Boost carries the 70% of the weight and the graph score carries 30.
 
 
-**Streamlit Dashboard, Alert Queue (Step 4)**
+**Streamlit Dashboard & Alert Queue (Step 4)**
 
 A live dashboard built with streamlit that opens automatically on my browser. It refreshes every 5 secods, show charts and an alerts queue where analyst can review flagged transactions and note down decisions.
 
