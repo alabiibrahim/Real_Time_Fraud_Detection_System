@@ -47,7 +47,7 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 
 ## Architecture
 
-![Architecture](images/Untitled%20Diagram.drawio%20(3).png)
+![Architecture](images/fraud%20detect%20system%20-%20data%20architecture.png)
 
 
 
