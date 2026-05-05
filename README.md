@@ -46,20 +46,25 @@ flags suspicious activity, and presents it to an analyst for a final decision to
 ![Architecture](images/fraud%20detect%20system%20-%20data%20architecture.png)
 
 ```
-CSV ▶ Producer ▶ Apache Kafka Topic ▶ Consumer ▶ ALERTS.JSON ▶ Streamlit Dashboard 
+CSV 
 
-⇊
+↓
 
 Producer 
 
-▼
+↓
 
 Apache Kafka
+
 ↓ 
 
 Consumer
 
-▼
+↓
+
+ALERTS.JSON
+
+↓
 
 Streamlit Dashboard
 
