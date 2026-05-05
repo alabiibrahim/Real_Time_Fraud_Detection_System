@@ -65,12 +65,12 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 
 **Pipeline, Kafka streaming (Step 1):**
 
-I built a real time data streaming pipeline using **Apache Kafka** that runs inside a docker container. The pipeline reads 6m+ transactions from a CSV file and streams them as live JSON events. It imitates a real babnk transaction feeds. The data is being sent in batches (100,000 rows).
+I built a real time data streaming pipeline using **Apache Kafka** that runs inside a docker container. The pipeline reads 6m+ transactions from a CSV file and streams them as live JSON events. It imitates a real babnk transaction feeds. The data is also being sent in batches (100,000 rows).
 
 ***Why it Matters*** 
 
-- Batch data streaming process.
-- Integrate with docker containers.
+- Read and Batch data streaming process.
+- Integrate kafka with docker containers.
 
 **XG-Boost classifier & SHAP (Step 2):**
 
@@ -102,17 +102,28 @@ A live dashboard built with streamlit that opens automatically on my browser. It
 
 
 
-Exceution Process
+Execution Process
 
-Kafka ‣ Consumer ‣ Producer  ‣ Streamlit live Dashboard
+Kafka + Docker ‣ Consumer ‣ Producer  ‣ Streamlit live Dashboard
 
-## Methodology
+![Visual](main/images/py2)
 
 
+Consumer
+
+![Visual](main/images/py2)
+
+
+Producer 
+
+![Visual](main/images/py2)
+
+Dashboard
+
+![Visual](main/images/py2)
 
 
 ## Challenges & Solution
-
 
 **Challenge**
 - The data pipeline processing performance was terrible and I noticed it takes 7-8 hrs to send 280,000 data, with that math, It's certain to achieve the full sending of 6m+ rows data will take 7-8 days maiking the project goal impossible.
