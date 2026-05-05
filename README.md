@@ -34,7 +34,7 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 
 **Results**
 
-| Measurable outcome | Results |
+| Model | Results | Meaning |
 | --- | --- |
 | Processed transactions (CSV) | 6,362,620 |
 | ROC-AUC | 0.9999 |
@@ -65,7 +65,7 @@ Analyze transaction-level data to flag suspicious patterns using anomaly detecti
 
 **Pipeline, Kafka streaming (Step 1):**
 
-I built a real time data streaming pipeline using **Apache Kafka** that runs inside a docker container. The pipeline reads 6m+ transactions from a CSV file and streams them as live JSON events. It imitates a real babnk transaction feeds. 
+I built a real time data streaming pipeline using **Apache Kafka** that runs inside a docker container. The pipeline reads 6m+ transactions from a CSV file and streams them as live JSON events. It imitates a real babnk transaction feeds. The data is being sent in batches (100,000 rows).
 
 **XG-Boost classifier & SHAP (Step 2):**
 
@@ -77,7 +77,7 @@ This part a machine learning model was built that scores every transaction (0-1)
 
 **Graph, ML ring detection (Step 3):**
 
-Developed a graph based fraud detection layer that analyses the relationship between accounts and not just individual transactions.
+Developed a graph based fraud detection layer that analyses the relationship between accounts and not just individual transactions. It build netwroks where accounts are node and transactions are edges.
 
 ## Methodology
 
