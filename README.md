@@ -77,7 +77,18 @@ This part a machine learning model was built that scores every transaction (0-1)
 
 **Graph, ML ring detection (Step 3):**
 
-Developed a graph based fraud detection layer that analyses the relationship between accounts and not just individual transactions. It build netwroks where accounts are node and transactions are edges.
+Developed a graph based fraud detection (TRANSFER and CASH_OUT transactions only types where fraud occurs) layer that analyses the relationship between accounts and not just individual transactions. It build networks where accounts are node and transactions are edges.
+
+Ring score - every accounts receives a ring score between 0 and 1 on its graph properties. This rules are interpretable so analyst can understand and challenge any score.
+Ensemble scoring to make decisions - the final fraud score cobines model with weighted average. XG Boost carries the 70% of the weight and the graph score carries 30.
+
+
+**Streamlit Dashboard, Alert Queue (Step 4)**
+
+A live dashboard built with streamlit that opens automatically on my browser. It refreshes every 5 secods, show charts and an alerts queue where analyst can review flagged transactions and note down decisions.
+
+***Why Streamlit***
+Streamlit converts python script directly into web development application without no front end required.
 
 ## Methodology
 
