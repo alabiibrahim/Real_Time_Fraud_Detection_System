@@ -131,7 +131,8 @@ services:
 
 
 **Consumer running**
-```
+
+```python
 
 import json
 import os
@@ -253,7 +254,8 @@ for message in consumer:
 
 
 **Producer running** 
-```
+
+```python
 # producer.py
 import json
 import time
