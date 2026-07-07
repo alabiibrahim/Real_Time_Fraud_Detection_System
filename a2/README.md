@@ -145,7 +145,6 @@ for message in consumer:
 
 ```
 
-
 *Producer*
 
 ```python
@@ -204,9 +203,9 @@ print(f"\nDone — {total_sent:,} transactions streamed successfully.")
 
 ```
 
-*Dashboard*
+*Streamlit-Dashboard*
 
-```
+```python
 # dashboard/app.py
 
 import streamlit as st
