@@ -328,8 +328,7 @@ print(f"\nDone — {total_sent:,} transactions streamed successfully.")
 
 *Dashboard running*
 
-```
-# dashboard/app.py
+```python
 
 import streamlit as st
 import pandas as pd
