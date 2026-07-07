@@ -72,7 +72,7 @@ graph LR
 
 ## Methodology 
 
-**Pipeline & Kafka streaming (Step 1):**
+**Pipeline & Kafka streaming**
 
 I built a real time data streaming pipeline using **Apache Kafka** that runs inside a docker container. The pipeline reads 6m+ transactions from a CSV file and streams them as live JSON events. It imitates a real babnk transaction feeds. The data is also being sent in batches (100,000 rows).
 
@@ -81,7 +81,7 @@ I built a real time data streaming pipeline using **Apache Kafka** that runs ins
 - Integrate kafka with docker containers.
 ---
 
-**XG-Boost classifier & SHAP (Step 2):**
+**XG-Boost classifier & SHAP**
 
 This part a machine learning model was built that scores every transaction (0-1) incase of fraud probability. This model is trained on 5m historical transactions and validated on 1.27m. SHAP is added to tell the reason why a transaction was flagged. 
 
@@ -92,7 +92,7 @@ This part a machine learning model was built that scores every transaction (0-1)
 
 ---
 
-**Graph & ML ring detection (Step 3):**
+**Graph & ML ring detection**
 
 Developed a graph based fraud detection (TRANSFER and CASH_OUT transactions only types where fraud occurs) layer that analyses the relationship between accounts and not just individual transactions. It build networks where accounts are node and transactions are edges.
 
@@ -102,7 +102,7 @@ Developed a graph based fraud detection (TRANSFER and CASH_OUT transactions only
 
 ---
 
-**Streamlit Dashboard & Alert Queue (Step 4)**
+**Streamlit Dashboard & Alert Queue**
 
 A live dashboard built with streamlit that opens automatically on my browser. It refreshes every 5 secods, show charts and an alerts queue where analyst can review flagged transactions and note down decisions.
 
