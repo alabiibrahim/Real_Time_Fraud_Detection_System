@@ -4,8 +4,6 @@
 
 ![visual](images/ac6.PNG)
 
-[Watch Demo-Video](https://screenrec.com/share/vaIqtEyWsC)
-
 
 ## Table of Contents
   
@@ -27,7 +25,7 @@ flags suspicious activity, and presents it to an analyst for a final decision to
 
 
 ***Objective (Goal)***
-- This project creates a real-time, production-grade fraud detection system from scratch that includes explainability, data streaming, machine learning, graph analysis, and a live analyst dashboard. 
+- This project creates a real-time, production-grade fraud detection system from scratch that includes explainability, data streaming, machine learning, graph analysis, and a live analyst dashboard. [Watch Demo-Video](https://screenrec.com/share/vaIqtEyWsC)
 
 
 ***Results***
