@@ -59,16 +59,6 @@ CSV → Producer → Apache Kafka Topic → Consumer → ALERTS.JSON → Streaml
 
 ```
 
-
-## Tools
-
-| Tools | Purpose |
-| --- | --- | 
-| Apache-Kafka | Data process pipeline | 
-| Docker | Stream live data (docker containers) |
-| Python (Pandas, Numpy, XGBoost, SHAP, Joblib, Scikit-Learn) | Data cleaning, feature engineering, train model |
-| Streamlit | In place of Power-BI for dahsboard | 
-
 ## Methodology 
 
 **Pipeline & Kafka streaming (Step 1):**
@@ -107,6 +97,33 @@ A live dashboard built with streamlit that opens automatically on my browser. It
 
 ## Execution Process
 
+```docker
+version: '3.8'
+
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.4.0
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+    ports:
+      - "2181:2181"
+
+  kafka:
+    image: confluentinc/cp-kafka:7.4.0
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+      - "9093:9093"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT_INTERNAL://0.0.0.0:9092,PLAINTEXT_EXTERNAL://0.0.0.0:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT_INTERNAL://kafka:9092,PLAINTEXT_EXTERNAL://localhost:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT_INTERNAL:PLAINTEXT,PLAINTEXT_EXTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT_INTERNAL
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1 
+```
  
 **Kafka + Docker container starting**
 
@@ -137,6 +154,14 @@ A live dashboard built with streamlit that opens automatically on my browser. It
 
 ![visual](images/ac8.PNG)
 
+## Tools
+
+| Tools | Purpose |
+| --- | --- | 
+| Apache-Kafka | Data process pipeline | 
+| Docker | Stream live data (docker containers) |
+| Python (Pandas, Numpy, XGBoost, SHAP, Joblib, Scikit-Learn) | Data cleaning, feature engineering, train model |
+| Streamlit | In place of Power-BI for dahsboard | 
 
 ## Challenges & Solution
 
