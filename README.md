@@ -18,7 +18,6 @@
 
 ## Project Overview
 
-
 ***Business Problem***
 - Financial institutions process millions of transactions daily. Manually reviewing all of them is impossible. This system automatically scores every transaction in real time,
 flags suspicious activity, and presents it to an analyst for a final decision to reduce fraud losses, while minimising false alarms that frustrate legitimate customers.
@@ -40,6 +39,7 @@ flags suspicious activity, and presents it to an analyst for a final decision to
 | Fraud cases detected | 4,027 |
 | Scoring latency | <50ms |
 
+---
 
 ## Architecture
 
@@ -68,6 +68,8 @@ graph LR
     H --> I[ALERTS.JSON]
     I --> J[Streamlit Dashboard<br>localhost:8501]
 ```
+---
+
 ## Methodology 
 
 **Pipeline & Kafka streaming (Step 1):**
@@ -77,6 +79,7 @@ I built a real time data streaming pipeline using **Apache Kafka** that runs ins
 ***Why it Matters*** 
 - Read and Batch data streaming process.
 - Integrate kafka with docker containers.
+---
 
 **XG-Boost classifier & SHAP (Step 2):**
 
@@ -87,6 +90,8 @@ This part a machine learning model was built that scores every transaction (0-1)
   - XG Boost is industry standard for fraud data cases because it handles class imbalance, and also easy to train on millions of rows.
   - SHAP explains why a specific transaction is flagged. It shows then features that pushes the score up and by how much.
 
+---
+
 **Graph & ML ring detection (Step 3):**
 
 Developed a graph based fraud detection (TRANSFER and CASH_OUT transactions only types where fraud occurs) layer that analyses the relationship between accounts and not just individual transactions. It build networks where accounts are node and transactions are edges.
@@ -95,6 +100,7 @@ Developed a graph based fraud detection (TRANSFER and CASH_OUT transactions only
 - Ring score - every accounts receives a ring score between 0 and 1 on its graph properties. This rules are interpretable so analyst can understand and challenge any score.
 - Ensemble scoring to make decisions - the final fraud score cobines model with weighted average. XG Boost carries the 70% of the weight and the graph score carries 30.
 
+---
 
 **Streamlit Dashboard & Alert Queue (Step 4)**
 
@@ -103,8 +109,7 @@ A live dashboard built with streamlit that opens automatically on my browser. It
 ***Why Streamlit?***
 - Streamlit converts python script directly into web development application without no front end required.
 
-
-## Execution Process
+*Kafka + Docker container starting*
 
 ```yml
 version: '3.8'
@@ -133,13 +138,11 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT_INTERNAL
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1 
 ```
- 
-**Kafka + Docker container starting**
 
 ![Visual](images/ac1.PNG)
 
 
-**Consumer running**
+*Consumer running*
 
 ```python
 
@@ -262,7 +265,7 @@ for message in consumer:
 ![visual](images/ac3-c.PNG)
 
 
-**Producer running** 
+*Producer running* 
 
 ```python
 # producer.py
@@ -323,7 +326,7 @@ print(f"\nDone — {total_sent:,} transactions streamed successfully.")
 
 ![visual](images/ac9.PNG)
 
-**Dashboard running**
+*Dashboard running*
 
 ```
 # dashboard/app.py
@@ -514,6 +517,8 @@ st.rerun()
 
 ![visual](images/ac8.PNG)
 
+---
+
 ## Tools
 
 | Tools | Purpose |
@@ -522,6 +527,8 @@ st.rerun()
 | Docker | Stream live data (docker containers) |
 | Python (Pandas, Numpy, XGBoost, SHAP, Joblib, Scikit-Learn) | Data cleaning, feature engineering, train model |
 | Streamlit | In place of Power-BI for dahsboard | 
+
+---
 
 ## Challenges & Solution
 
