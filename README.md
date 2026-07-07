@@ -52,12 +52,6 @@ This project is built on three functional layers that works together as a contin
 
 ```
 
-![Architecture](images/fraud%20detect%20system%20-%20data%20architecture.png)
-
-```
-CSV → Producer → Apache Kafka Topic → Consumer → ALERTS.JSON → Streamlit Dashboard
-
-```
 ```mermaid
 graph LR
     A[CSV Dataset] --> B[Producer]
