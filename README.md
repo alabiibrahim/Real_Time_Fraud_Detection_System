@@ -50,7 +50,14 @@ This project is built on three functional layers that works together as a contin
 - Detection: Its purpose is to score each and every transaction based on fraud probabilites.
 - Response: Purpose is to act on the score.
 
+```
 
+![Architecture](images/fraud%20detect%20system%20-%20data%20architecture.png)
+
+```
+CSV → Producer → Apache Kafka Topic → Consumer → ALERTS.JSON → Streamlit Dashboard
+
+```
 ```mermaid
 graph LR
     A[CSV Dataset] --> B[Producer]
@@ -66,16 +73,7 @@ graph LR
     
     H --> I[ALERTS.JSON]
     I --> J[Streamlit Dashboard<br>localhost:8501]
-
 ```
-
-![Architecture](images/fraud%20detect%20system%20-%20data%20architecture.png)
-
-```
-CSV → Producer → Apache Kafka Topic → Consumer → ALERTS.JSON → Streamlit Dashboard
-
-```
-
 ## Methodology 
 
 **Pipeline & Kafka streaming (Step 1):**
