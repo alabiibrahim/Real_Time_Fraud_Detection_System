@@ -50,6 +50,23 @@ This project is built on three functional layers that works together as a contin
 - Detection: Its purpose is to score each and every transaction based on fraud probabilites.
 - Response: Purpose is to act on the score.
 
+
+```mermaid
+graph LR
+    A[CSV Dataset] --> B[Producer]
+    B --> C[Apache Kafka<br>Transactions Topic]
+    C --> D[Consumer]
+    D --> E[Feature Engineering]
+    
+    E --> F[XGBoost Classifier]
+    E --> G[Graph ML Ring Score]
+    
+    F --> H[Decision:<br>Fraud, Review, OK]
+    G --> H
+    
+    H --> I[ALERTS.JSON]
+    I --> J[Streamlit Dashboard<br>localhost:8501]
+
 ```
 
 ![Architecture](images/fraud%20detect%20system%20-%20data%20architecture.png)
