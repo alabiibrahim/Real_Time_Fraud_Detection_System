@@ -97,7 +97,7 @@ A live dashboard built with streamlit that opens automatically on my browser. It
 
 ## Execution Process
 
-```docker
+```python
 version: '3.8'
 
 services:
