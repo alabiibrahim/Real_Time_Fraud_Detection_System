@@ -204,7 +204,7 @@ print(f"\nDone — {total_sent:,} transactions streamed successfully.")
 
 ```
 
-*Streamlit-Dashboard*
+*Dashboard*
 
 ```python
 # dashboard/app.py
