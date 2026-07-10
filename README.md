@@ -525,7 +525,7 @@ st.rerun()
 | Apache-Kafka | Data process pipeline | 
 | Docker | Stream live data (docker containers) |
 | Python (Pandas, Numpy, XGBoost, SHAP, Joblib, Scikit-Learn) | Data cleaning, feature engineering, train model |
-| Streamlit | In place of Power-BI for dahsboard | 
+| Streamlit | Dashboard and Visualization | 
 
 ---
 
