@@ -29,8 +29,8 @@ flags suspicious activity, and presents it to an analyst for a final decision to
 
 ***Results***
 
-| Model | Results | Meaning |
-| --- | --- | --- |
+| Model | Results |
+| --- | --- | 
 | Processed transactions (CSV) | 6,362,620 |
 | ROC-AUC | 0.9999 |
 | PR-AUC | 0.9834 |
